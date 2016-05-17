@@ -1,0 +1,7 @@
+[warn] D:\Cars\app\controllers\SearchingFormController.scala:25: method current in object Play is deprecated: This is a static reference to application, use DI instead
+[warn]         Ok(views.html.searchingForm("", searchingForm))
+[warn]                                    ^
+[warn] D:\Cars\app\controllers\SearchingFormController.scala:34: method current in object Play is deprecated: This is a static reference to application, use DI instead
+[warn]         Ok(views.html.searchingForm(manu, searchingForm))
+[warn]                                    ^
+[warn] two warnings found

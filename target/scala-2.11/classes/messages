@@ -1,0 +1,5 @@
+manufacturer = Manufacturer
+model = Model
+
+cars.form = Search for car
+cars.search.submit = Search

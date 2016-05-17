@@ -1,0 +1,5 @@
+[debug] Copy resource mappings: 
+[debug] 	(D:\Cars\conf\application.conf,D:\Cars\target\scala-2.11\classes\application.conf)
+[debug] 	(D:\Cars\conf\logback.xml,D:\Cars\target\scala-2.11\classes\logback.xml)
+[debug] 	(D:\Cars\conf\messages,D:\Cars\target\scala-2.11\classes\messages)
+[debug] 	(D:\Cars\conf\routes,D:\Cars\target\scala-2.11\classes\routes)

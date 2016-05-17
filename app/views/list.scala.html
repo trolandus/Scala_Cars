@@ -1,0 +1,14 @@
+@(cars: List[Car])
+
+@main("Cars"){
+    <dl class="products">
+        @for(car <- cars) {
+            <dt>@car.manufacturer</dt>
+            <dt>@car.model</dt>
+            <dd>Cena: @car.price PLN</dd>
+            <dd>Rok produkcji: @car.year</dd>
+            <dd>Przebieg: @car.mileage km</dd>
+            <dd>Paliwo: @car.fuel</dd>
+        }
+    </dl>
+}

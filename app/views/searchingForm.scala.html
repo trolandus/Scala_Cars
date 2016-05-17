@@ -1,0 +1,33 @@
+@**(searchingForm: Form[SearchingFilter], manu:List[String], db:Map[String, List[String]])(implicit lang: Lang, messages: Messages)**@
+@(manu:String, searchingForm: Form[SearchingFilter])(implicit lang: Lang, messages: Messages)
+@import helper._
+@import database.CarsDB
+
+@main("Browser") {
+    <h2>Search for car</h2>
+    
+    @helper.form(action = routes.SearchingForm.search){
+        <fieldset>
+            @helper.select(searchingForm("manufacturer"), options(CarsDB.Manufacturers.keys.to[collection.immutable.List]), 'id -> "manuSelect")
+            @helper.select(searchingForm("model"), options(CarsDB.Manufacturers(manu)), 'id -> "modelSelect")
+        </fieldset>
+        <p><input type="submit" class="btn primary"
+            value='Search'>
+        </p>
+    }
+    
+    <p id="result" hidden>@manu</p>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+        (function($){
+            //TO JEST ZŁE, WIEM, ALE CHUJ
+            var base = "http://localhost:9000/showForm";
+            $('#manuSelect').val("@manu");
+            $('#manuSelect').change(function() {
+                $('#result').text($('#manuSelect').val());
+                window.location.href = base + "/" + $('#result').text();
+            })
+        })(jQuery);
+    </script>
+}
